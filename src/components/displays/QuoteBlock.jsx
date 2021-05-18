@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function QuoteBlock({ quote, character, image }) {
+const QuoteBlock = ({ quote, character, image }) => {
+  console.log(quote, character, image);
   return (
     <figure>
       <figcaption>{character}</figcaption>
@@ -9,8 +10,12 @@ function QuoteBlock({ quote, character, image }) {
       <figcaption>{quote}</figcaption>
     </figure>
   );
-}
+};
 
-QuoteBlock.propTypes = {};
+QuoteBlock.propTypes = {
+  character: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  quote: PropTypes.string.isRequired,
+};
 
 export default QuoteBlock;
