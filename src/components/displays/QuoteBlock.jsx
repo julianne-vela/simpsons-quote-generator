@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const QuoteBlock = ({ quote, character, image }) => {
-  console.log(quote, character, image);
   return (
     <figure>
       <figcaption>{character}</figcaption>
