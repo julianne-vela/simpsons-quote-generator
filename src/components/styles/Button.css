@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-button {
+button.generateQuote {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,11 +13,15 @@ button {
   cursor: pointer;
 }
 
-button:active {
+.hidden {
+  display: none;
+}
+
+.generateQuote:active {
   transform: translateY(10px);
 }
 
-label {
+label.generateQuote {
   display: flex;
   font-family: 'Anton', sans-serif;
   font-size: 10em;

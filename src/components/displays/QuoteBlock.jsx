@@ -1,13 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import style from '../styles/QuoteBlock.css';
 
-const QuoteBlock = ({ quote, character, image }) => {
+const QuoteBlock = ({ quote, character, image, id, hidden }) => {
   return (
-    <figure>
-      <figcaption>{character}</figcaption>
-      <img src={image} alt={character} />
-      <figcaption>{quote}</figcaption>
-    </figure>
+    <section
+      id={id}
+      className={`${hidden === id ? style.hidden : style.generateQuote}`}
+    >
+      <figure>
+        <figcaption>{character}</figcaption>
+
+        <img src={image} alt={character} />
+
+        <figcaption>{quote}</figcaption>
+      </figure>
+
+      <button className={style.reset}>New Quote</button>
+    </section>
   );
 };
 

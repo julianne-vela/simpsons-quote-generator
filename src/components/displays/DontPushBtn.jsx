@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../../components/styles/Button.css';
+import style from '../../components/styles/Button.css';
 
-const DontPushBtn = ({ onClick }) => {
+const DontPushBtn = ({ onClick, id, hidden }) => {
   return (
     <>
-      <button onClick={onClick}>
-        <label>
+      <button
+        id={id}
+        className={`${hidden === id ? style.hidden : style.generateQuote}`}
+        onClick={onClick}
+      >
+        <label className={style.generateQuote}>
           DON'T<br></br>PUSH
         </label>
       </button>

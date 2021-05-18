@@ -1,0 +1,16 @@
+section.quoteBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 75%;
+}
+
+.hidden {
+  display: none;
+}
+
+button.reset {
+  border-radius: 10px;
+}

@@ -8,9 +8,11 @@ import style from '../components/styles/Main.css';
 const SimpsonsQuotes = () => {
   const [quote, setQuote] = useState({});
   const [loading, setLoading] = useState(false);
+  const [hiddenId, setHiddenId] = useState('quoteBlock');
 
   const handleClick = async () => {
     setLoading(true);
+    setHiddenId('generateBtn');
     const quote = await fetchQuote();
     setQuote(quote);
     setLoading(false);
@@ -18,8 +20,12 @@ const SimpsonsQuotes = () => {
 
   return (
     <main className={style.mainContainer}>
-      <DontPushBtn onClick={handleClick} />
-      {loading ? <Loading /> : <QuoteBlock {...quote} />}
+      <DontPushBtn id="generateBtn" onClick={handleClick} hidden={hiddenId} />
+      {loading ? (
+        <Loading />
+      ) : (
+        <QuoteBlock id="quoteBlock" hidden={hiddenId} {...quote} />
+      )}
     </main>
   );
 };
