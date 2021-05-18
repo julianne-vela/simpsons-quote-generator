@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+
+  /* Color Palette */
+  --green: #d3f8e2;
+  --purple: #e4c1f9;
+  --pink: #f694c1;
+  --yellow: #ede7b1;
+  --blue: #a9def9;
+  --panic: radial-gradient(
+    circle,
+    rgba(214, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--green);
+}

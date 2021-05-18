@@ -1,0 +1,70 @@
+section.quoteBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 75%;
+}
+
+.quoteBlock figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border: 3px solid var(--yellow);
+  border-radius: 10px;
+  background-color: var(--yellow);
+}
+
+.quoteBlock img {
+  height: 70%;
+}
+
+.quoteBlock div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70%;
+  background-color: var(--pink);
+}
+
+.quoteBlock .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue);
+  height: 10%;
+  width: 100%;
+  font-size: 2em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 5px;
+}
+
+.quoteBlock .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  font-size: 1.5em;
+  height: 20%;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--purple);
+}
+
+.hidden {
+  display: none;
+}
+
+button.reset {
+  border-radius: 10px;
+  background-color: var(--blue);
+  width: 80px;
+  border: 4px outset var(--pink);
+  box-shadow: 0 0 10px var(--purple);
+}
