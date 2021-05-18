@@ -6,14 +6,16 @@ const QuoteBlock = ({ quote, character, image, id, hidden, onClick }) => {
   return (
     <section
       id={id}
-      className={`${hidden === id ? style.hidden : style.generateQuote}`}
+      className={`${hidden === id ? style.hidden : style.quoteBlock}`}
     >
       <figure>
-        <figcaption>{character}</figcaption>
+        <figcaption className={style.title}>{character}</figcaption>
 
-        <img src={image} alt={character} />
+        <div>
+          <img src={image} alt={character} />
+        </div>
 
-        <figcaption>{quote}</figcaption>
+        <figcaption className={style.text}>{quote}</figcaption>
       </figure>
 
       <button className={style.reset} onClick={onClick}>

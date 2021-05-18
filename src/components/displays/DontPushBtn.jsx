@@ -7,10 +7,11 @@ const DontPushBtn = ({ onClick, id, hidden }) => {
     <>
       <button
         id={id}
+        name="generateBtn"
         className={`${hidden === id ? style.hidden : style.generateQuote}`}
         onClick={onClick}
       >
-        <label className={style.generateQuote}>
+        <label id="btnText" className={style.generateQuote}>
           DON'T<br></br>PUSH
         </label>
       </button>

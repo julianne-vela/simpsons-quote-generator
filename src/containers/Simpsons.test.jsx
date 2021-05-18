@@ -1,5 +1,11 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import {
+  render,
+  screen,
+  fireEvent,
+  waitFor,
+  getByLabelText,
+} from '@testing-library/react';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import SimpsonsQuotes from './SimpsonsQuotes';
@@ -27,7 +33,7 @@ describe('Simpsons Quote Generator tests', () => {
   it('renders a button to fetch a quote and displays it', async () => {
     render(<SimpsonsQuotes />);
 
-    const button = screen.getByRole('button');
+    const button = screen.getByRole('button', { name: "DON'T PUSH" });
 
     fireEvent.click(button);
 
