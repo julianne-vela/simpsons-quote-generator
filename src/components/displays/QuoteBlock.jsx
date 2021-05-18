@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from '../styles/QuoteBlock.css';
 
-const QuoteBlock = ({ quote, character, image, id, hidden }) => {
+const QuoteBlock = ({ quote, character, image, id, hidden, onClick }) => {
   return (
     <section
       id={id}
@@ -16,7 +16,9 @@ const QuoteBlock = ({ quote, character, image, id, hidden }) => {
         <figcaption>{quote}</figcaption>
       </figure>
 
-      <button className={style.reset}>New Quote</button>
+      <button className={style.reset} onClick={onClick}>
+        New Quote
+      </button>
     </section>
   );
 };

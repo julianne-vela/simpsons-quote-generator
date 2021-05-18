@@ -24,7 +24,12 @@ const SimpsonsQuotes = () => {
       {loading ? (
         <Loading />
       ) : (
-        <QuoteBlock id="quoteBlock" hidden={hiddenId} {...quote} />
+        <QuoteBlock
+          id="quoteBlock"
+          onClick={handleClick}
+          hidden={hiddenId}
+          {...quote}
+        />
       )}
     </main>
   );
